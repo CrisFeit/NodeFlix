@@ -1,0 +1,1 @@
+header{font-size:34px;transition:opacity .3s;transform:scale(1);-webkit-animation:fadeIn .2s;animation:fadeIn .2s}@-webkit-keyframes fadeIn{0%{-webkit-filter:blur(10);filter:blur(10)}to{-webkit-filter:blur(0);filter:blur(0)}}@keyframes fadeIn{0%{-webkit-filter:blur(10);filter:blur(10)}to{-webkit-filter:blur(0);filter:blur(0)}}body{background-color:#222;color:#00a1f1}

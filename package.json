@@ -1,0 +1,48 @@
+{
+  "name": "nodeflix",
+  "version": "1.0.0",
+  "description": "netflix in node",
+  "main": "app/server/server.js",
+  "scripts": {
+    "dev": "concurrently 'npm:client' 'npm:server'",
+    "client": "webpack-dev-server --open --config webpack.dev.js",
+    "server": "nodemon app/server/server.js",
+    "build": "webpack --config webpack.prod.js",
+    "start": "node app/server/server.js"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "express": "^4.17.1",
+    "pug": "^2.0.4"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.6",
+    "@babel/plugin-proposal-async-generator-functions": "^7.8.3",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-syntax-async-generators": "^7.8.4",
+    "@babel/plugin-transform-runtime": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "autoprefixer": "^9.8.0",
+    "babel-loader": "^8.1.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "concurrently": "^5.2.0",
+    "css-loader": "^3.5.3",
+    "cssnano": "^4.1.10",
+    "dotenv": "^8.2.0",
+    "file-loader": "^6.0.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "nodemon": "^2.0.4",
+    "postcss-easy-import": "^3.0.0",
+    "postcss-loader": "^3.0.0",
+    "postcss-preset-env": "^6.7.0",
+    "style-loader": "^1.2.1",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.11.0",
+    "webpack-merge": "^4.2.2"
+  }
+}

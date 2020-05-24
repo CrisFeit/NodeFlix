@@ -1,0 +1,17 @@
+
+
+header{
+  font-size: 34px;
+  transition: opacity .3s;
+  transform: scale(1);
+  animation: fadeIn .2s;
+}
+
+@keyframes fadeIn{
+  from{
+    filter: blur(10)
+  }
+  to{
+    filter: blur(0);
+  }
+}
