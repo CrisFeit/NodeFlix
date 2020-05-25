@@ -1,8 +1,14 @@
 extends layouts/base
 block content
-  h1 Hello From the Server
+  h1 Collection Page
   ul
-    each media , i in medias
-      li= media.Title
-        a(href= `${media.Type}/${media.Folder}`)
-          img(src=media.Poster, alt="Poster")
+    each media in medias
+      li.media-wrap
+        if media.Error
+          h4.media.Folder
+          a(href= `${activeRoute}/${media.Folder}`)
+            p.media-error= media.Error
+        else
+          h4.media-title= media.Title
+          a(href= `${activeRoute}/${media.Folder}`)
+            img(src=media.Poster, alt="Poster")

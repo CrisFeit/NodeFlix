@@ -6,7 +6,15 @@ header{
   transform: scale(1);
   animation: fadeIn .2s;
 }
-
+li{
+  display: inline-block;
+  margin: auto;
+  color: rgba(0, 238, 0 ,0.9);
+  margin: 10px 20px;
+}
+a{
+  color: rgba(0, 238, 0 ,0.9);
+}
 @keyframes fadeIn{
   from{
     filter: blur(10)

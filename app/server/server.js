@@ -27,10 +27,10 @@ class App {
 const app = new App().server
 
 app.use((req,res,next)=>{
-  return res.status(404).render('error' ,{message: 'Not Found'})
+  return res.status(404).render('error' ,{ message: 'Not Found '})
 })
-app.use((erro,req,res,next)=>{
-  return res.status(500).render('error',{message: 'Error Occured'})
+app.use((err,req,res,next)=>{
+  return res.status(500).render('error',{ message: 'Error Occured'})
 })
 
 app.listen( process.env.PORT || 5050,()=>{

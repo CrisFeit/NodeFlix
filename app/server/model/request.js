@@ -8,9 +8,10 @@ class Request {
     })
   }
   
-  getMedias(media,type = 'movie') {
-    return this.request.get(`${media}&type=${type}`)
+  getMedias(title,type) {
+    return this.request.get(`${title}&type=${type}`)
   }
+
 }
 
 module.exports = new Request()

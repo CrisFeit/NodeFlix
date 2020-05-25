@@ -3,24 +3,39 @@ const path = require('path')
 const currentDir = path.resolve(process.cwd())
 
 class Model {
-  
+
   movies = []
 
   series = []
 
   animes = []
 
+
   getFoldersNames(folder) {
-      let regex = /s$/
-      regex.test(folder) ? null : folder = folder + 's'
-      let source = path.resolve(currentDir, './medias/'+folder)
-      if(source){
-        return readdirSync(source, { withFileTypes: true })
+    let source = path.resolve(currentDir, './medias/' + folder)
+    if (source) {
+      return readdirSync(source, { withFileTypes: true })
         .filter(dirent => dirent.isDirectory())
         .map(dirent => dirent.name)
-      }else{
-        return false
-      }
+    } else {
+      return false
+    }
+  }
+
+  getFiles(folderPath) {
+    let source = path.join(currentDir, folderPath)
+    if (source) {
+      readdirSync(source, 'utf8', (err, item) => {
+        if (err) {
+          console.log('Unable to scan directory: ' + err);
+          return false 
+        }
+        files.forEach(function (file) {
+          // Do whatever you want to do with the file
+          console.log('files',file);
+        })
+      })
+    }
   }
 }
 

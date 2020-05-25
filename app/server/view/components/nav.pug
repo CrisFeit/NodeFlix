@@ -1,0 +1,6 @@
+nav.nav
+  ul.nav-list
+    if(routes)
+      each link, key in routes
+        li.nav-item
+          a(href=`${link}` class="nav-link")= key
