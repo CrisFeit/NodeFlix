@@ -7,6 +7,8 @@ block content
         a(href= `${activeRoute}/${media.Folder}`)
           p.media-error= media.Error
       else
-        h4.media-title= media.Title
+        h4.media-title=  media.Title
+        h3.media-director= media.Director
+        p.media-plot= media.Plot
         a(href= `${activeRoute}/${media.Folder}`)
           img(src=media.Poster, alt="Poster")

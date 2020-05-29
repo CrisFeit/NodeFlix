@@ -3,13 +3,13 @@ const axios = require('axios')
 
 class Request {
   constructor() {
-    this.request = axios.create({
-      baseURL : process.env.BASE_URL
+    this.url = axios.create({
+      baseURL : `http://www.omdbapi.com/?apikey=${process.env.API_KEY}&t=`
     })
   }
   
   getMedias(title,type) {
-    return this.request.get(`${title}&type=${type}`)
+    return this.url.get(`${title}&type=${type}`)
   }
 
 }

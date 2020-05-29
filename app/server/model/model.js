@@ -31,7 +31,7 @@ class Model {
           return false 
         }
         files.forEach(function (file) {
-          // Do whatever you want to do with the file
+          // abrir os arquivos file
           console.log('files',file);
         })
       })
