@@ -1,13 +1,14 @@
 const model = require('../model/model')
 const request = require('../model/request')
+const genre = require('../model/genre')
 class Controller {
-
+  
   routes = {
     movies: '/movies',
     series: '/series',
     animes: '/animes',
   }
-
+  
   renderCollection = async (req, res, next) => {
     let type = this.getType(req)
     let activeRoute = req.url.replace('/', '')
@@ -18,13 +19,14 @@ class Controller {
         return res.render('index', {
           activeRoute,
           routes: this.routes,
-          medias: model[activeRoute]
+          medias: model[activeRoute],
+          genres : genre.genres
         })
       } else {
         return res.render('error', {
           activeRoute,
           routes: this.routes,
-          message: 'Missing Named Folders'
+          message: 'Missing Named Folders',
         })
       }
     } catch (err) {
@@ -50,12 +52,13 @@ class Controller {
 
   async filterMedias(folders, type) {
     let promises = await Promise.all(folders.map(folder => request.getMedias(folder, type)))
-    return promises.filter((infos, index) => {
-      infos.data.Folder = folders[index]
-      return infos.data.Response.toLowerCase() == 'true'
-    }).map(infos => {
-      // infos.data.Genre.includes('Animation') ? infos.data.Type = 'animes' : null
-      return infos.data
+    return promises.filter((media, index) => {
+      media.data.Folder = folders[index]
+      return media.data.Response.toLowerCase() == 'true'
+    }).map(media => {
+      media.data.Genre = genre.findGenre(media.data.Genre)
+      // media.data.Genre.includes('Animation') ? media.data.Type = 'animes' : null
+      return media.data
     })
   }
 

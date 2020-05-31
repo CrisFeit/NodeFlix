@@ -3,9 +3,12 @@ html
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title FullStack Workflow
-    link(rel='stylesheet', href='style.css')
+    link(href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet")
+    link(href="https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&family=Roboto:wght@400;900&display=swap" rel="stylesheet")
+    link(rel='stylesheet', href='/style.css')
+    script(src="/main.js" defer)
   body
     include header
-    block content
+    main.main
+      block content
     
-    script(src="main.js")

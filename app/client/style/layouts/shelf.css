@@ -1,0 +1,27 @@
+.shelf {
+  display: flex;
+  flex-direction : column;
+  max-width: 20vw;
+  scroll-snap-type : center;
+  max-height: 80vh;
+  overflow-y: auto;
+  overscroll-behavior-y: contain;
+  scroll-snap-type: y mandatory;
+  gap:.3rem;
+  @media(max-width : 768px){
+    max-width: 100%;
+  }
+}
+
+.shelf-name{
+  color : var(--color-primary);
+  text-align: center;
+  font-size: calc(22rem/16)
+}
+
+.shelf-item{
+  margin: auto;
+  width: 80%;
+  scroll-snap-align : center;
+  margin: 20px auto;
+}

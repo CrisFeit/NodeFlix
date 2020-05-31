@@ -1,3 +1,3 @@
-import module from './modules/module';
+import { shelf } from './modules/module';
 
-document.addEventListener('DOMContentLoaded',module.warning)
+document.addEventListener('DOMContentLoaded',shelf.init)

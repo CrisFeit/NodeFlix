@@ -4,7 +4,7 @@ module.exports = {
     context: path.resolve(__dirname, 'app/client'),
     entry: [
         './js/index.js',
-        './css/style.css',
+        './style/style.postcss',
     ],
 
     output: {

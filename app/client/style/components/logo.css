@@ -1,0 +1,14 @@
+.logo{
+  font-family: var(--font-title);
+  color: var(--color-primary);
+  font-size: calc(60rem/16);
+  letter-spacing: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  text-shadow: 10px 10px 8px black;
+  transition: .2s;
+  margin-right: 20px;
+}
+.logo:hover{
+  transform: scale(1.1);
+}

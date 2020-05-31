@@ -1,14 +1,15 @@
 extends layouts/base
 block content
-  h1 Single Page
-    section.media-wrap
+    section.single
       if media.Error
-        h4.media.Folder
+        h4.single.Folder
         a(href= `${activeRoute}/${media.Folder}`)
           p.media-error= media.Error
       else
-        h4.media-title=  media.Title
-        h3.media-director= media.Director
-        p.media-plot= media.Plot
-        a(href= `${activeRoute}/${media.Folder}`)
+        h4.single-title=  media.Title
+        if media.Director != 'N/A'
+          p.single-director
+            span.single-director-label Director &nbsp;
+            span.single-director-name= media.Director
+        p.single-plot= media.Plot
           img(src=media.Poster, alt="Poster")

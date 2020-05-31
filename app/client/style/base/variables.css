@@ -1,0 +1,18 @@
+:root{
+  /* Colors */
+  --color-primary : #00db00;
+  --color-primary-med: #6ebe4d;
+  --color-primary-dark: #669f64;
+  --color-light: snow;
+  --color-background-dark-light: #1e1e1e;
+  --color-background-dark: #0a0a0a;
+  --text-shine: 0 0 7px snow;
+  
+  /* Fonts */
+  --font-text : 'Roboto', sans-serif;
+  --font-title:  'Bebas Neue', cursive;
+
+  /* Dimensions */
+  --container : 2.5%;
+  --height-header : 15vh;
+}

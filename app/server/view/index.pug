@@ -1,14 +1,16 @@
 extends layouts/base
+
 block content
-  h1 Collection Page
-  ul
-    each media in medias
-      li.media-wrap
-        if media.Error
-          h4.media.Folder
-          a(href= `${activeRoute}/${media.Folder}`)
-            p.media-error= media.Error
-        else
-          h4.media-title= media.Title
-          a(href= `${activeRoute}/${media.Folder}`)
-            img(src=media.Poster, alt="Poster")
+  each genre in genres
+    section.shelf
+      h3.shelf-name= genre
+        each media in medias
+          if media.Genre == genre
+            div.shelf-item
+              if media.Error
+                h4.media.Folder
+                a(href= `${activeRoute}/${media.Folder}`)
+                  p.media-error= media.Error
+              else
+                a(href= `${activeRoute}/${media.Folder}`)
+                  img(src= media.Poster, alt="Poster")

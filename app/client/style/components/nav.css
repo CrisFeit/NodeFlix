@@ -1,0 +1,30 @@
+.nav{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.nav-list{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nav-item{
+  margin: auto;
+  padding: 0 1rem;
+  margin: auto;
+}
+
+.nav-link{
+  font-family: var(--font-title);
+  color: var(--color-light);
+  font-size: calc(25rem/16);
+  text-decoration: none;
+  padding: .5em 0;
+  transition: .1s;
+
+}
+.nav-link:hover{
+  text-shadow: var(--text-shine);
+  border-bottom: 1px solid var(--color-primary);   
+}
