@@ -15,7 +15,6 @@ class App {
     this.server.use(express.urlencoded({ extended : false }))
     this.server.use(express.json())
     this.server.use(express.static(path.join(__dirname,'assets')))
-    // this.server.use(express.static(__dirname))
     this.server.set('views',path.join(__dirname,'view'))
     this.server.set('view engine' , 'pug')
   }

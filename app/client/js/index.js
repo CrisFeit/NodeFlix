@@ -1,3 +1,7 @@
 import { shelf } from './modules/module';
+import { mySwiper } from './modules/slides';
 
-document.addEventListener('DOMContentLoaded',shelf.init)
+document.addEventListener('DOMContentLoaded',function(){
+    shelf.init()
+    mySwiper
+})

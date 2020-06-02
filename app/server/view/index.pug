@@ -1,16 +1,22 @@
 extends layouts/base
 
 block content
-  each genre in genres
-    section.shelf
-      h3.shelf-name= genre
-        each media in medias
-          if media.Genre == genre
-            div.shelf-item
-              if media.Error
-                h4.media.Folder
-                a(href= `${activeRoute}/${media.Folder}`)
-                  p.media-error= media.Error
-              else
-                a(href= `${activeRoute}/${media.Folder}`)
-                  img(src= media.Poster, alt="Poster")
+  main.main.main-collection.swiper-container
+    section.section-collection.swiper-wrapper
+      each genre in genres
+        div.shelf.swiper-slide
+          h3.shelf-name= genre
+            each media in medias
+              if media.Genre == genre
+                div.shelf-item
+                  if media.Error
+                    h4.media.Folder
+                    a(href= `${activeRoute}/${media.Folder}`)
+                      p.media-error= media.Error
+                  else
+                    a(href= `${activeRoute}/${media.Folder}` class="swiper-slide")
+                      img(src= media.Poster, alt="Poster")
+    div.swiper-pagination
+    div.swiper-button-prev
+    div.swiper-button-next
+    div.swiper-scrollbar

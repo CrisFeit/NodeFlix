@@ -1,9 +1,5 @@
 .main{
   width: 100%;
   margin-top: var(--height-header);
-  padding: var(--container);
-  display: flex;
-  overflow: auto;
-  overscroll-behavior: contain;
-  scroll-snap-type : both mandatory;
+  padding: 1rem var(--container);
 }
