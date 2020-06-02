@@ -3,11 +3,10 @@ extends layouts/base
 block content
   main.main.main-collection.swiper-container
     section.section-collection.swiper-wrapper
-      each genre in genres
+      each genre ,key in medias
         div.shelf.swiper-slide
-          h3.shelf-name= genre
-            each media in medias
-              if media.Genre == genre
+          h3.shelf-name= key
+            each media in genre
                 div.shelf-item
                   if media.Error
                     h4.media.Folder

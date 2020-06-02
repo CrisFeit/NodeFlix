@@ -1,4 +1,4 @@
 .swiper-container {
     width: 80vw;
-    height: 100%;
+    height: auto !important;
 }

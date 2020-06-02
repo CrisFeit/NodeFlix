@@ -4,11 +4,11 @@
   align-items: center;
   width: 100%;
   height: var(--height-header);
-  min-height: 50px;
   padding: 0 var(--container);
-  position: fixed;
+  /* min-height: 50px; */
+  /* position: fixed;
   top: 0;
-  left: 0;
+  left: 0; */
   z-index: 100;
   background-color: var(--color-background-dark-light);
 }

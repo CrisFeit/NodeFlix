@@ -15,12 +15,14 @@ class Controller {
     try {
       let folders = model.getFoldersNames(activeRoute)
       if (folders) {
-        model[activeRoute] = await this.filterMedias(folders, type)
+        if(!Object.keys(model[activeRoute]).length){
+          await this.filterMedias(folders, type,model[activeRoute])
+        }
+        
         return res.render('index', {
           activeRoute,
+          medias : model[activeRoute],
           routes: this.routes,
-          medias: model[activeRoute],
-          genres : genre.genres
         })
       } else {
         return res.render('error', {
@@ -50,15 +52,20 @@ class Controller {
     })
   }
 
-  async filterMedias(folders, type) {
+  async filterMedias(folders, type,vesel) {
     let promises = await Promise.all(folders.map(folder => request.getMedias(folder, type)))
-    return promises.filter((media, index) => {
+    
+    return  promises.filter((media, index) => {
       media.data.Folder = folders[index]
       return media.data.Response.toLowerCase() == 'true'
     }).map(media => {
       media.data.Genre = genre.findGenre(media.data.Genre)
       // media.data.Genre.includes('Animation') ? media.data.Type = 'animes' : null
-      return media.data
+      if(vesel.hasOwnProperty(media.data.Genre)){
+        vesel[media.data.Genre].push(media.data)
+      }else{
+        vesel[media.data.Genre] = [media.data]
+      }
     })
   }
 

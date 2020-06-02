@@ -4,11 +4,11 @@ const currentDir = path.resolve(process.cwd())
 
 class Model {
 
-  movies = []
+  movies = {}
 
-  series = []
+  series = {}
 
-  animes = []
+  animes = {}
 
 
   getFoldersNames(folder) {
