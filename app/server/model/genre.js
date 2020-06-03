@@ -1,5 +1,5 @@
 class Genre {
-    genres = [
+    act = [
     'Sci-Fi',
     'History',
     'Fantasy',
@@ -12,10 +12,24 @@ class Genre {
     'Action',
     'Drama',
   ]
+  anime =[
+    'Sci-Fi',
+    'History',
+    'War',
+    'Crime',
+    'Horror',
+    'Romace',
+    'Thriller',
+    'Action',
+    'Drama',
+    'Comedy',
+    'Fantasy',
+  ]
 
-  findGenre(media){
-    let index = this.genres.findIndex(genre => media.includes(genre))
-    return index != -1 ? this.genres[index] : 'Drama'
+  findGenre(mediaGenre){
+    let genres = mediaGenre.includes('Animation') ? this.anime : this.act
+    let index = genres.findIndex(genre => mediaGenre.includes(genre))
+    return index != -1 ? genres[index] : 'Drama'
   }
 
 }

@@ -1,3 +1,24 @@
-.single > p{
-  font-size: calc(25rem/16);
+.single-page{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.single-info{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.single-poster{
+  flex: 1;
+  display: flex;
+}
+
+.single-poster img {
+  margin: auto;
 }

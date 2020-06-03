@@ -16,8 +16,12 @@ module.exports = merge(common, {
       {
         test: /\.(sa|sc|c|pc|postc)ss$/,
         use: [
-          'style-loader',
-          'css-loader',
+          'style-loader',{  
+            loader :'css-loader',
+            options: {
+              importLoaders: 1
+            }
+          },
           'postcss-loader',
         ]
       }

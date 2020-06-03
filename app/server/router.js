@@ -2,7 +2,7 @@ const { Router } = require('express');
 
 const router = new Router()
 
-const middleware = require('./middlewares/middleware')
+const middleware = require('./middleware/middleware')
 const controller = require('./controller/controller')
 
 router.get('/',

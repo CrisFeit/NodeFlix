@@ -1,10 +1,11 @@
 import Swiper from 'swiper';
 
-export var mySwiper = new Swiper('.swiper-container',{
+export var mySwiper = new Swiper('.main-collection',{
     // Optional parameters
     direction: 'horizontal',
     // loop: true,
 
+    slidesPerView : 5,
     // If we need pagination
     // pagination: {
     //   el: '.swiper-pagination',

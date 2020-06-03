@@ -2,15 +2,16 @@ extends layouts/base
 block content
   main.main.main-single  
     section.single-page
-      div.single
-        if media.Error
-          h4.single.Folder
-          p.media-error= media.Error
-        else
+      if media.Error
+        h4.single.Folder
+        p.media-error= media.Error
+      else
+        div.single-info
           h4.single-title=  media.Title
           if media.Director != 'N/A'
             p.single-director
               span.single-director-label Director &nbsp;
               span.single-director-name= media.Director
-          p.single-plot= media.Plot
-            img(src=media.Poster, alt="Poster")
+            p.single-plot= media.Plot
+        div.single-poster
+          img(src=media.Poster, alt="Poster")

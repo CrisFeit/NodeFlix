@@ -1,4 +1,12 @@
 .swiper-container {
-    width: 80vw;
+    /* width: 80vw; */
     height: auto !important;
+    position: relative;
 }
+.swiper-button-prev ,.swiper-button-next{
+    color: var(--color-primary);
+    position: fixed;
+}
+
+
+

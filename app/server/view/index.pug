@@ -13,9 +13,7 @@ block content
                     a(href= `${activeRoute}/${media.Folder}`)
                       p.media-error= media.Error
                   else
-                    a(href= `${activeRoute}/${media.Folder}` class="swiper-slide")
+                    a(href= `${activeRoute}/${media.Folder}?genre=${media.Genre}` class="swiper-slide")
                       img(src= media.Poster, alt="Poster")
-    div.swiper-pagination
     div.swiper-button-prev
     div.swiper-button-next
-    div.swiper-scrollbar

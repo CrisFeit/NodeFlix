@@ -44,7 +44,7 @@ class Controller {
 
   renderSingle = (req, res) => {
     let activeRoute = req.url.replace('/','').split('/')[0]
-    const media = model[activeRoute].find(media => media.Folder == req.params.id)
+    const media = model[activeRoute][req.query.genre].find(media => media.Folder == req.params.id)
     res.render('single',{
       activeRoute,
       routes:this.routes,
