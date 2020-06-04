@@ -1,7 +1,7 @@
 import { shelf } from './modules/module';
-import { mySwiper } from './modules/slides';
+import horizontal from './modules/slides';
 
 document.addEventListener('DOMContentLoaded',function(){
     shelf.init()
-    mySwiper
+    horizontal
 })

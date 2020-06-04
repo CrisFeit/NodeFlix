@@ -8,7 +8,7 @@ class Request {
     })
   }
   
-  getMedias(title,type) {
+  getData(title,type) {
     return this.url.get(`${title}&type=${type}`)
   }
 

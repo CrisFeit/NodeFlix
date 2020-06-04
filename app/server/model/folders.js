@@ -2,14 +2,7 @@ const { readdirSync } = require('fs')
 const path = require('path')
 const currentDir = path.resolve(process.cwd())
 
-class Model {
-
-  movies = {}
-
-  series = {}
-
-  animes = {}
-
+class Folder {
 
   getFoldersNames(folder) {
     let source = path.resolve(currentDir, './medias/' + folder)
@@ -39,4 +32,4 @@ class Model {
   }
 }
 
-module.exports = new Model();
+module.exports = new Folder()

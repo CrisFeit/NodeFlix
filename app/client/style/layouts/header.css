@@ -5,10 +5,11 @@
   width: 100%;
   height: var(--height-header);
   padding: 0 var(--container);
-  /* min-height: 50px; */
-  /* position: fixed;
-  top: 0;
-  left: 0; */
   z-index: 100;
   background-color: var(--color-background-dark-light);
+  @media(max-width: 420px) {
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+  }
 }

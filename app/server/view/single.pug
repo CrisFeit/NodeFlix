@@ -7,11 +7,23 @@ block content
         p.media-error= media.Error
       else
         div.single-info
-          h4.single-title=  media.Title
+          h4.single-title= media.Title
+          p.label.time Time
+          p.data.time= media.Runtime
+          p.label.year Year
+          p.data.year= media.Year
+          p.label.rating Rating
+          p.data.rating= media.imdbRating +' / 10'
+          if media.Awards != 'N/A'
+            p.label.awards Awards
+            p.data.awards= media.Awards
           if media.Director != 'N/A'
-            p.single-director
-              span.single-director-label Director &nbsp;
-              span.single-director-name= media.Director
-            p.single-plot= media.Plot
+            p.label.director Director 
+            p.data.director= media.Director
+          if media.Actores != 'N/A'
+            p.label.actores Actors 
+            p.data.actores= media.Actors
+          p.label.synopse Synopse
+          p.data.synopse= media.Plot
         div.single-poster
           img(src=media.Poster, alt="Poster")

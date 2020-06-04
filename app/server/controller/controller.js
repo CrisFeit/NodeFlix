@@ -1,6 +1,6 @@
-const model = require('../model/model')
-const request = require('../model/request')
-const genre = require('../model/genre')
+const Media = require('../model/medias')
+const Folder = require('../model/folders')
+
 class Controller {
   
   routes = {
@@ -13,15 +13,15 @@ class Controller {
     let type = this.getType(req)
     let activeRoute = req.url.replace('/', '')
     try {
-      let folders = model.getFoldersNames(activeRoute)
+      let folders = Folder.getFoldersNames(activeRoute)
       if (folders) {
-        if(!Object.keys(model[activeRoute]).length){
-          await this.filterMedias(folders, type,model[activeRoute])
+        if(!Object.keys(Media[activeRoute]).length){
+          await Media.filterMedias(folders, type,Media[activeRoute])
         }
         
         return res.render('index', {
           activeRoute,
-          medias : model[activeRoute],
+          medias : Media[activeRoute],
           routes: this.routes,
         })
       } else {
@@ -44,28 +44,11 @@ class Controller {
 
   renderSingle = (req, res) => {
     let activeRoute = req.url.replace('/','').split('/')[0]
-    const media = model[activeRoute][req.query.genre].find(media => media.Folder == req.params.id)
+    const media = Media[activeRoute][req.query.genre].find(media => media.Folder == req.params.id)
     res.render('single',{
       activeRoute,
       routes:this.routes,
       media
-    })
-  }
-
-  async filterMedias(folders, type,vesel) {
-    let promises = await Promise.all(folders.map(folder => request.getMedias(folder, type)))
-    
-    return  promises.filter((media, index) => {
-      media.data.Folder = folders[index]
-      return media.data.Response.toLowerCase() == 'true'
-    }).map(media => {
-      media.data.Genre = genre.findGenre(media.data.Genre)
-      // media.data.Genre.includes('Animation') ? media.data.Type = 'animes' : null
-      if(vesel.hasOwnProperty(media.data.Genre)){
-        vesel[media.data.Genre].push(media.data)
-      }else{
-        vesel[media.data.Genre] = [media.data]
-      }
     })
   }
 
