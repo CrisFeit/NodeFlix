@@ -24,6 +24,24 @@ body{
     -ms-text-size-adjust: 100%;
     scroll-behavior: smooth;
     background-color: var(--color-background-dark);
+
+    &::-webkit-scrollbar {
+        width: 7px;
+        height: 5px;
+    }
+  
+    &::-webkit-scrollbar-thumb {
+        background: var(--color-primary-med);
+    }
+  
+    &::-webkit-scrollbar-track {
+        background: var(--color-background-dark);
+    }
+  
+    &{
+        scrollbar-face-color: var(--color-primary);
+        scrollbar-track-color: var(--color-background-dark);
+    }
 }
 main {
     width: 100%;

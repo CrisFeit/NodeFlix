@@ -12,11 +12,15 @@ block content
           p.data.time= media.Runtime
           p.label.year Year
           p.data.year= media.Year
+          button.play-button Play
           p.label.rating Rating
           p.data.rating= media.imdbRating +' / 10'
           if media.Awards != 'N/A'
             p.label.awards Awards
             p.data.awards= media.Awards
+          if media.Type == 'series'
+            p.label.season Seasons
+            p.data.season= media.totalSeasons
           if media.Director != 'N/A'
             p.label.director Director 
             p.data.director= media.Director

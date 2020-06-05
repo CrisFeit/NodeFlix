@@ -1,4 +1,4 @@
-const Media = require('../model/medias')
+let Media = require('../model/medias')
 const Folder = require('../model/folders')
 
 class Controller {
@@ -7,38 +7,27 @@ class Controller {
     movies: '/movies',
     series: '/series',
     animes: '/animes',
+    books: '/books',
   }
   
   renderCollection = async (req, res, next) => {
     let type = this.getType(req)
     let activeRoute = req.url.replace('/', '')
     try {
-      let folders = Folder.getFoldersNames(activeRoute)
-      if (folders) {
-        if(!Object.keys(Media[activeRoute]).length){
-          await Media.filterMedias(folders, type,Media[activeRoute])
-        }
-        
-        return res.render('index', {
-          activeRoute,
-          medias : Media[activeRoute],
-          routes: this.routes,
-        })
-      } else {
-        return res.render('error', {
-          activeRoute,
-          routes: this.routes,
-          message: 'Missing Named Folders',
-        })
-      }
+        let folders = Folder.getFoldersNames(activeRoute)
+        await Media.filterMedias(folders, type,activeRoute)
+        Media[activeRoute].quantity = folders.length
+      return res.render('index', {
+        activeRoute,
+        medias : Media[activeRoute],
+        routes: this.routes,
+      })
     } catch (err) {
       res.render('error', {
         activeRoute,
         routes: this.routes,
         message: err + ' \n Check the Folders Instructions'
       });
-      next()
-      return
     }
   }
 

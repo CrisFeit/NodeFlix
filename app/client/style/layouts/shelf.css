@@ -15,10 +15,6 @@
   @media(max-width : 768px){
     min-width: 30%;
   }
-/* 
-  @media(max-width : 420px){
-    min-width: 48%;
-  } */
 
   @media(max-width : 320px){
     min-width: 100%;

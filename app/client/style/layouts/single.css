@@ -18,8 +18,9 @@
   flex: 1;
   display: grid;
   grid-template-columns: repeat(8,1fr);
-  gap: 1.5rem;
+  gap: 1.2rem;
   min-width: 320px;
+  position: relative;
 }
 .single-title{
   grid-column: 1/8;
@@ -38,10 +39,33 @@
 .single-info > .data{
   grid-column: 4/8;
 }
+
+.single-info > .play-button {
+  position: absolute;
+  right: 15%;
+  top: 20%;
+  border: none;
+  border-radius: 5px;
+  padding: .5em 1em;
+  box-sizing: border-box;
+  font: calc(25rem/16)/1 var(--font-title);
+  color: var(--color-light);
+  background-color: var(--color-primary-med);
+  &:hover{
+    text-shadow: var(--text-shine);
+  }
+  &:active{
+    box-shadow:  inset .3em .3em .3em var(--color-primary-med), 
+                inset -.3em -.3em .3em var(--color-primary);
+  }
+  
+}
+
 .single-poster{
   flex: 1;
   display: flex;
 }
+
 
 .single-poster img {
 

@@ -34,4 +34,10 @@ router.get(`${controller.routes.animes}/:id`,
   controller.renderSingle
 )
 
+
+router.get(controller.routes.books,
+  middleware.removeLastShash,
+  controller.renderCollection
+)
+
 module.exports = router;

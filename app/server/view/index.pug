@@ -4,16 +4,17 @@ block content
   main.main.main-collection.swiper-container
     section.section-collection.swiper-wrapper
       each genre ,key in medias
-        div.shelf.swiper-slide
-          h3.shelf-name= key
-            each media in genre
-                div.shelf-item
-                  if media.Error
-                    h4.media.Folder
-                    a(href= `${activeRoute}/${media.Folder}`)
-                      p.media-error= media.Error
-                  else
-                    a(href= `${activeRoute}/${media.Folder}?genre=${media.Genre}` class="swiper-slide")
-                      img(src= media.Poster, alt="Poster")
+        if key !=='quantity'
+          div.shelf.swiper-slide
+            h3.shelf-name= key
+              each media in genre
+                  div.shelf-item
+                    if media.Error
+                      h4.media.Folder
+                      a(href= `${activeRoute}/${media.Folder}`)
+                        p.media-error= media.Error
+                    else
+                      a(href= `${activeRoute}/${media.Folder}?genre=${media.Genre}` class="swiper-slide")
+                        img(src= media.Poster, alt="Poster")
     div.swiper-button-prev
     div.swiper-button-next
