@@ -14,7 +14,7 @@ class App {
   middlewares() {
     this.server.use(express.urlencoded({ extended : false }))
     this.server.use(express.json())
-    this.server.use(express.static(path.join(__dirname,'assets')))
+    this.server.use(express.static(path.join(__dirname,'public/assets')))
     this.server.set('views',path.join(__dirname,'view'))
     this.server.set('view engine' , 'pug')
   }
@@ -34,5 +34,5 @@ app.use((err,req,res,next)=>{
 })
 
 app.listen( process.env.PORT || 5050,()=>{
-  console.log('Node is listening on port 5050...')
+  console.log(`Server is listening on port ${process.env.PORT || 5050}...`)
 })

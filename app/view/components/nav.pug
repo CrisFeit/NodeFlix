@@ -3,4 +3,4 @@ nav.nav
     if(routes)
       each link, key in routes
         li.nav-item
-          a(href=`${link}` class="nav-link")= key
+          a.nav-link(href=`${link}` class={'is-link-active': key == activeRoute})= key

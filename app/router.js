@@ -10,16 +10,16 @@ router.get('/',
 )
 
 router.get(controller.routes.movies,
-  middleware.removeLastShash,
+  middleware.removeLastSlash,
   controller.renderCollection
 )
 router.get(`${controller.routes.movies}/:id`,
-  middleware.removeLastShash,
+  middleware.removeLastSlash,
   controller.renderSingle
 )
 
 router.get(controller.routes.series,
-  middleware.removeLastShash,
+  middleware.removeLastSlash,
   controller.renderCollection
 )
 router.get(`${controller.routes.series}/:id`,
@@ -27,17 +27,11 @@ router.get(`${controller.routes.series}/:id`,
 )
 
 router.get(controller.routes.animes,
-  middleware.removeLastShash,
+  middleware.removeLastSlash,
   controller.renderCollection
 )
 router.get(`${controller.routes.animes}/:id`,
   controller.renderSingle
-)
-
-
-router.get(controller.routes.books,
-  middleware.removeLastShash,
-  controller.renderCollection
 )
 
 module.exports = router;

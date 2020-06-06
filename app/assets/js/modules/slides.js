@@ -1,6 +1,6 @@
 import Swiper from 'swiper';
 
-export const horizontal = new Swiper('.main-collection',{
+export const swiper = new Swiper('.main-collection',{
     direction: 'horizontal',
 
     slidesPerView : 5,

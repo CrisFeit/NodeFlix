@@ -1,14 +1,14 @@
 const path = require('path');
 
 module.exports = {
-    context: path.resolve(__dirname, 'app/client'),
+    context: path.resolve(__dirname, 'app/assets'),
     entry: [
         './js/index.js',
-        './style/style.pcss',
+        './css/style.pcss',
     ],
 
     output: {
-        path: path.resolve(__dirname, 'app/server/assets')
+        path: path.resolve(__dirname, 'app/public/assets')
     },
 
     module: {

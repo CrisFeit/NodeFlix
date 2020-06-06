@@ -1,5 +1,5 @@
-const Request = require('../model/request')
-const Genres = require('../model/genre')
+const Request = require('./request')
+const Genres = require('./genre')
 
 class Media {
 
@@ -19,7 +19,7 @@ class Media {
       media.data.Folder = folders[index]
       return media.data.Response.toLowerCase() == 'true' 
     }).forEach(media => {
-      media.data.Genre = Genres.findGenre(media.data.Genre)
+      media.data.Genre = Genres.findGenre(media.data)
         if(this[route].hasOwnProperty(media.data.Genre)){
             this[route][media.data.Genre].push(media.data)
           

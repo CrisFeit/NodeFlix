@@ -7,7 +7,6 @@ class Controller {
     movies: '/movies',
     series: '/series',
     animes: '/animes',
-    books: '/books',
   }
   
   renderCollection = async (req, res, next) => {
