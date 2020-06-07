@@ -33,6 +33,6 @@ app.use((err,req,res,next)=>{
   return res.status(500).render('error',{ message: 'Error Occured'})
 })
 
-app.listen( process.env.PORT || 5050,()=>{
-  console.log(`Server is listening on port ${process.env.PORT || 5050}...`)
+app.listen( process.env.PORT || 3333,()=>{
+  console.log(`Server is listening on port ${process.env.PORT || 3333}...`)
 })

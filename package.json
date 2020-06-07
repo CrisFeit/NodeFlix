@@ -1,7 +1,7 @@
 {
   "name": "nodeflix",
-  "version": "1.0.0",
-  "description": "netflix in node",
+  "version": "0.6.0",
+  "description": "Media interface based on user's files system",
   "main": "app/server.js",
   "scripts": {
     "dev": "concurrently 'npm:client' 'npm:server'",
