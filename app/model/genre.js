@@ -1,12 +1,12 @@
 class Genre {
     act = [
+    'Horror',
     'Animation',
     'Sci-Fi',
     'History',
     'Fantasy',
     'War',
     'Crime',
-    'Horror',
     'Romace',
     'Comedy',
     'Thriller',
@@ -14,11 +14,11 @@ class Genre {
     'Drama',
   ]
   anime =[
+    'Horror',
     'Sci-Fi',
     'History',
     'War',
     'Crime',
-    'Horror',
     'Romace',
     'Thriller',
     'Action',

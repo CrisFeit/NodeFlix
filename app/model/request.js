@@ -4,7 +4,7 @@ const axios = require('axios')
 class Request {
   constructor() {
     this.url = axios.create({
-      baseURL : `http://www.omdbapi.com/?apikey=${process.env.API_KEY}&t=`
+      baseURL : `${process.env.API_KEY}&t=`
     })
   }
   
