@@ -5,11 +5,16 @@ class Genre {
     'Sci-Fi',
     'History',
     'Fantasy',
-    'War',
     'Crime',
+<<<<<<< HEAD
+=======
+    'War',
+    'Thriller',
+    'Mystery',
+>>>>>>> f284e475ea6da6cdaef2a36228ab41c1aede481c
     'Romace',
     'Comedy',
-    'Thriller',
+    'Adventure',
     'Action',
     'Drama',
   ]
@@ -21,10 +26,11 @@ class Genre {
     'Crime',
     'Romace',
     'Thriller',
+    'Adventure',
     'Action',
-    'Drama',
     'Comedy',
     'Fantasy',
+    'Drama',
   ]
 
   findGenre({Genre ,Type}){    

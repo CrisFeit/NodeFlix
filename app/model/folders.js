@@ -5,7 +5,7 @@ const currentDir = path.resolve(process.cwd())
 class Folder {
 
   getFoldersNames(folder) {
-    let source = path.resolve(currentDir, './medias/' + folder)
+    let source = path.resolve(currentDir,'./medias/' + folder)
     if (source) {
       return readdirSync(source, { withFileTypes: true })
         .filter(dirent => dirent.isDirectory())

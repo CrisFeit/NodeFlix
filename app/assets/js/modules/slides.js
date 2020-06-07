@@ -18,6 +18,6 @@ export const swiper = new Swiper('.main-collection',{
       },
       640: {
         slidesPerView: 3,
-      }
+      },
     }
   });
