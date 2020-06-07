@@ -7,12 +7,12 @@ block content
         p.media-error= media.Error
       else
         div.single-info
-          h4.single-title= media.Title
+          h4.single-title.notranslate(translate="no")= media.Title
           p.label.time Time
           p.data.time= media.Runtime
           p.label.year Year
           p.data.year= media.Year
-          button.play-button Play
+          button.play-button.notranslate(translate="no") Play
           p.label.rating Rating
           p.data.rating= media.imdbRating +' / 10'
           if media.Awards != 'N/A'

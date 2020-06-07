@@ -1,33 +1,30 @@
 class Genre {
     act = [
-    'Horror',
     'Animation',
+    'Horror',
     'Sci-Fi',
+    'Crime',
     'History',
     'Fantasy',
-    'Crime',
-<<<<<<< HEAD
-=======
     'War',
     'Thriller',
     'Mystery',
->>>>>>> f284e475ea6da6cdaef2a36228ab41c1aede481c
     'Romace',
     'Comedy',
-    'Adventure',
     'Action',
+    'Adventure',
     'Drama',
   ]
   anime =[
-    'Horror',
     'Sci-Fi',
+    'Crime',
     'History',
     'War',
-    'Crime',
+    'Horror',
     'Romace',
     'Thriller',
-    'Adventure',
     'Action',
+    'Adventure',
     'Comedy',
     'Fantasy',
     'Drama',
