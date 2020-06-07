@@ -1,30 +1,33 @@
 class Genre {
     act = [
+    'Horror',
     'Animation',
     'Sci-Fi',
     'History',
     'Fantasy',
-    'War',
     'Crime',
-    'Horror',
+    'War',
+    'Thriller',
+    'Mystery',
     'Romace',
     'Comedy',
-    'Thriller',
+    'Adventure',
     'Action',
     'Drama',
   ]
   anime =[
+    'Horror',
     'Sci-Fi',
     'History',
     'War',
     'Crime',
-    'Horror',
     'Romace',
     'Thriller',
+    'Adventure',
     'Action',
-    'Drama',
     'Comedy',
     'Fantasy',
+    'Drama',
   ]
 
   findGenre({Genre ,Type}){    
