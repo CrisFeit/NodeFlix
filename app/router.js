@@ -23,6 +23,7 @@ router.get(controller.routes.series,
   controller.renderCollection
 )
 router.get(`${controller.routes.series}/:id`,
+  middleware.removeLastSlash,
   controller.renderSingle
 )
 
@@ -31,6 +32,7 @@ router.get(controller.routes.animes,
   controller.renderCollection
 )
 router.get(`${controller.routes.animes}/:id`,
+  middleware.removeLastSlash,
   controller.renderSingle
 )
 
