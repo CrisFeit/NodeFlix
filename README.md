@@ -1,5 +1,5 @@
 # NodeFlix
- ### Service media interface based on user's files
+ ### Service media interface based on user files
 
 ##  Features
 * Posters and infos about the medias
@@ -7,7 +7,7 @@
 * Season selector
 
 ## Requirements
-* Node.Js 12 or latest
+* Node.js 12 or latest
 ## Install
 ```bash
   npm install
