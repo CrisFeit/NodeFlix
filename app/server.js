@@ -2,6 +2,7 @@ require('dotenv/config')
 const express = require('express')
 const routes = require('./router')
 const path = require('path')
+const opn  = require('opn')
 
 class App {
   constructor() {
@@ -12,7 +13,6 @@ class App {
   }
 
   middlewares() {
-    this.server.use(express.urlencoded({ extended : false }))
     this.server.use(express.json())
     this.server.use(express.static(path.join(__dirname,'public/assets')))
     this.server.set('views',path.join(__dirname,'view'))
@@ -33,6 +33,11 @@ app.use((err,req,res,next)=>{
   return res.status(500).render('error',{ message: 'Error Occured'})
 })
 
-app.listen( process.env.PORT || 3333,()=>{
-  console.log(`Server is listening on port ${process.env.PORT || 3333}...`)
+app.listen( process.env.PORT || 5050,()=>{
+
+  if(process.env.NODE_ENV === 'start') {
+    opn(`http://localhost:${ process.env.PORT || 5050 }`);
+  }
+  
+  console.log(`NodeFlix is running on port ${process.env.PORT || 5050}...`)
 })
