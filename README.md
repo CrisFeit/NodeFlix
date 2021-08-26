@@ -1,5 +1,6 @@
 # NodeFlix
  ### Service media interface based on user files
+ ![NodeFlix](https://mir-s3-cdn-cf.behance.net/projects/original/88e13e98481321.Y3JvcCwxMTI4LDg4MywyNSww.png)
 
 ##  Features
 * Posters and infos about the medias
