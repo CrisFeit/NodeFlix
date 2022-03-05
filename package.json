@@ -1,6 +1,6 @@
 {
   "name": "nodeflix",
-  "version": "0.6.1",
+  "version": "0.6.2",
   "description": "Media interface based on user's files system",
   "main": "app/server.js",
   "scripts": {
